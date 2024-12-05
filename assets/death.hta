@@ -1,0 +1,36 @@
+<html>
+<head>
+    <title>Warning: D3ath0nly Activated</title>
+    <hta:application id="virusApp" 
+                     applicationname="D3ath0nly"
+                     border="thin"
+                     maximizebutton="no"
+                     minimizebutton="no"
+                     sysmenu="no"
+                     scroll="no"
+                     navigable="no"
+                     singleinstance="yes" />
+    <script type="text/javascript">
+        function playSound() {
+            var audio = new Audio('C:\\path\\to\\scary_sound.mp3');
+            audio.play();
+        }
+
+        function showWarning() {
+            alert("If you try to close this window or restart your computer, System32 will be deleted. This is not a joke.");
+        }
+
+        window.onload = function() {
+            playSound();
+            showWarning();
+        };
+    </script>
+</head>
+<body>
+    <h1 style="color:red;text-align:center;">Warning: D3ath0nly Activated</h1>
+    <p style="text-align:center; font-size: 20px;">If you try to close this window or restart your computer, critical system files will be deleted.</p>
+    <hr>
+    <h2 style="color:black;text-align:center;">What to do now?</h2>
+    <p style="text-align:center; font-size: 18px;">There is nothing you can do. This computer is permanently infected.</p>
+</body>
+</html>
