@@ -11,10 +11,13 @@
                      navigable="no"
                      singleinstance="yes" />
     <script type="text/javascript">
+        var mediaPlayer;
+
         function playSound() {
-            var audio = new Audio('assets\death.mp3');
-            audio.loop = true;  // Nastavení smyčky
-            audio.play();
+            mediaPlayer = new ActiveXObject("WMPlayer.OCX");
+            mediaPlayer.URL = "assets\\death.mp3";
+            mediaPlayer.controls.play();
+            mediaPlayer.settings.setMode("loop", true);
         }
 
         function showWarning() {
