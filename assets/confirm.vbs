@@ -5,7 +5,7 @@ If userResponse = vbNo Then
     WScript.Quit
 Else
     Set objShell = CreateObject("WScript.Shell")
-    objShell.RegWrite "HKCU\Control Panel\Desktop\Wallpaper", "C:\path\to\death\assets\death.jpg"
+    objShell.RegWrite "HKCU\Control Panel\Desktop\Wallpaper", "assets\death.jpg"
     objShell.Run "RUNDLL32.EXE user32.dll,UpdatePerUserSystemParameters"
     objShell.Run "assets\death.hta"
 End If
