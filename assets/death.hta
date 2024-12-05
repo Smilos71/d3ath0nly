@@ -13,6 +13,7 @@
     <script type="text/javascript">
         function playSound() {
             var audio = new Audio('C:\\path\\to\\scary_sound.mp3');
+            audio.loop = true;  // Nastavení smyčky
             audio.play();
         }
 
