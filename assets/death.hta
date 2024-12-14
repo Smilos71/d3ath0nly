@@ -31,8 +31,10 @@
         }
 
         window.onload = function() {
-            playStartupSound();
-            showWarning();
+            setTimeout(function() {
+                playStartupSound();
+                showWarning();
+            }, 700);
         };
     </script>
 </head>
@@ -44,4 +46,5 @@
     <p style="text-align:center; font-size: 18px;">There is nothing you can do. This computer is permanently infected.</p>
 </body>
 </html>
+
 
