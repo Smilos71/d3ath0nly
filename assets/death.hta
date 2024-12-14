@@ -13,8 +13,14 @@
     <script type="text/javascript">
         var mediaPlayer;
 
-        function playSound() {
+        function playStartupSound() {
             mediaPlayer = new ActiveXObject("WMPlayer.OCX");
+            mediaPlayer.URL = "assets\\startup.mp3";
+            mediaPlayer.controls.play();
+            setTimeout(playSound, mediaPlayer.controls.currentItem.duration > 0 ? mediaPlayer.controls.currentItem.duration * 1000 : 5000);
+        }
+
+        function playSound() {
             mediaPlayer.URL = "assets\\death.mp3";
             mediaPlayer.controls.play();
             mediaPlayer.settings.setMode("loop", true);
@@ -25,7 +31,7 @@
         }
 
         window.onload = function() {
-            playSound();
+            playStartupSound();
             showWarning();
         };
     </script>
@@ -38,3 +44,4 @@
     <p style="text-align:center; font-size: 18px;">There is nothing you can do. This computer is permanently infected.</p>
 </body>
 </html>
+
